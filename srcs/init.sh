@@ -37,6 +37,7 @@ mysql -u root phpmyadmin --force < phpmyadmin.sql
 #Extraction phpmyadmin and wordpress
 unzip phpMyAdmin-5.1.0-all-languages.zip
 unzip wordpress-5.7.1-fr_FR.zip
+unzip -o wordpress-custom-setup.zip
 
 #Move folder website to root webserver
 mv wordpress /var/www/wordpress
@@ -44,6 +45,8 @@ mv phpMyAdmin-5.1.0-all-languages /var/www/phpmyadmin
 
 #Move configuration nginx, wordpress and phpmyadmin
 mv default.conf /etc/nginx/conf.d/
+mv custom_404.html /etc/nginx/conf.d/
+mv custom_403.html /etc/nginx/conf.d/
 mv wp-config.php /var/www/wordpress/
 mv config.inc.php /var/www/phpmyadmin
 
@@ -52,4 +55,4 @@ mkdir /var/www/phpmyadmin/tmp
 chmod 777 /var/www/phpmyadmin/tmp
 
 #Delete srcs files
-rm -rf /var/www/html phpmyadmin.sql phpMyAdmin-5.1.0-all-languages.zip wordpress-5.7.1-fr_FR.zip /etc/nginx/sites-enabled/default init.sh
+rm -rf /var/www/html phpmyadmin.sql phpMyAdmin-5.1.0-all-languages.zip wordpress-5.7.1-fr_FR.zip /etc/nginx/sites-enabled/default wordpress-custom-setup.zip init.sh

@@ -14,6 +14,9 @@ COPY ./srcs/autoindex.sh /
 COPY ./srcs/wp-config.php /
 COPY ./srcs/config.inc.php /
 COPY ./srcs/phpmyadmin.sql /
+COPY ./srcs/custom_404.html /
+COPY ./srcs/custom_403.html /
+COPY ./srcs/wordpress-custom-setup.zip /
 COPY ./srcs/phpMyAdmin-5.1.0-all-languages.zip /
 COPY ./srcs/wordpress-5.7.1-fr_FR.zip /
 
