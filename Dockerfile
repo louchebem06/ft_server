@@ -28,7 +28,7 @@ CMD service php7.4-fpm start && ./autoindex.sh && service mysql start && tail -f
 #	PHPMYADMIN
 #
 #	USERNAME: bledda
-#	PASSWORD; bledda
+#	PASSWORD: bledda
 #
 #	DEFAULT THEME: metro
 #
