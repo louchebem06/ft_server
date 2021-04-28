@@ -1,6 +1,11 @@
 #bledda <bledda@student.42nice.fr>
 #Script for configuration docker ft_server
 
+#Setup local time
+ZONEINFO=Europe/Paris
+rm -f /etc/localtime
+ln -s /usr/share/zoneinfo/$ZONEINFO /etc/localtime
+
 #Update package
 apt-get -y update && apt-get -y upgrade
 
@@ -47,6 +52,7 @@ mv phpMyAdmin-5.1.0-all-languages /var/www/phpmyadmin
 mv default.conf /etc/nginx/conf.d/
 mv custom_404.html /etc/nginx/conf.d/
 mv custom_403.html /etc/nginx/conf.d/
+mv autoindex.xslt /etc/nginx/conf.d/
 mv wp-config.php /var/www/wordpress/
 mv config.inc.php /var/www/phpmyadmin
 
