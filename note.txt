@@ -43,3 +43,7 @@ Pour del une images
 ```shell
 docker rmi ft_server_image
 ```
+
+Purge Docker
+```shell
+docker system prune -a```
