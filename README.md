@@ -46,4 +46,5 @@ docker rmi ft_server_image
 
 Purge Docker
 ```shell
-docker system prune -a```
+docker system prune -a
+```
